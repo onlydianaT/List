@@ -86,7 +86,6 @@ public class Main {
             }
         }
     }
-
 //    private static void print() {
 //        for (String i : list) {
 //            System.out.println(i);
