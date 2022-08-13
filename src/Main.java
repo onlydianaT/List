@@ -35,25 +35,16 @@ public class Main {
 
             if (ActionNumber == 1) {
                 System.out.println("List of products: ");
-//                print();
-                for (String i : list) {
-                    System.out.println(i);
-                }
+                print(list);
             }
             if (ActionNumber == 2) {
                 System.out.println("List of products: ");
-                //print();
-                for (String i : list) {
-                    System.out.println(i);
-                }
+                print(list);
                 System.out.println("What number of product do you want to remove? Input number or name of product");
                 String inputRemove = scanner.nextLine();
                 list.remove(inputRemove);
                 System.out.println("Purchase " + inputRemove + " is removed, list of products: ");
-                //print();
-                for (String i : list) {
-                    System.out.println(i);
-                }
+                print(list);
                 try {
                     int productRemove = Integer.parseInt(inputRemove) - 1;
                     for (int i = 0; i < list.size(); i++) {
@@ -63,10 +54,7 @@ public class Main {
                             System.out.println("Purchase " + t + " is removed, list of products: ");
                         }
                     }
-                    //print();
-                    for (String i : list) {
-                        System.out.println(i);
-                    }
+                    print(list);
                 } catch (NumberFormatException e) {
                     continue;
                 }
@@ -86,10 +74,10 @@ public class Main {
             }
         }
     }
-//    private static void print() {
-//        for (String i : list) {
-//            System.out.println(i);
-//        }
-//
-//    }
+
+    private static void print(List<String> list) {
+        for (String i : list) {
+            System.out.println(i);
+        }
+    }
 }
